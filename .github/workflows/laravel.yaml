@@ -1,0 +1,25 @@
+name : 'laravel'
+on:
+  push:
+    branches:
+    - "main"
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: ubuntu-20.04
+    environment: production
+    steps:
+    - name: AWS CodeDeploy
+      uses: sourcetoad/aws-codedeploy-action@v1
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
+        aws_region: ap-southeast-1
+        codedeploy_name: example-codedeploy-app
+        codedeploy_group: example-codedeploy-deployment-group
+        codedeploy_register_only: true
+        s3_bucket: codepipeline-ap-southeast-1-794253563693
+        s3_folder: /
+        max_polling_iterations: 60
+        directory: ./
