@@ -22,4 +22,5 @@ jobs:
         s3_bucket: codepipeline-ap-southeast-1-794253563693
         s3_folder: def
         max_polling_iterations: 60
-        directory: ../
+        directory: ./
+      run: pwd
