@@ -1,9 +1,9 @@
-version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /var/www/laravel-code
-hooks:
-  # BeforeInstall:
-  #   - location: /var/www/html
-  #     timeout: 900
+# version: 0.0
+# os: linux
+# files:
+#   - source: /
+#     destination: /var/www/laravel-code
+# hooks:
+#   # BeforeInstall:
+#   #   - location: /var/www/html
+#   #     timeout: 900
