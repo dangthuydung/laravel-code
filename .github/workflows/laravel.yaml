@@ -9,7 +9,6 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-20.04
     environment: production
-
     steps:
     - name: AWS CodeDeploy
       uses: sourcetoad/aws-codedeploy-action@v1

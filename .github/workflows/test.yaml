@@ -9,7 +9,6 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-20.04
     environment: production
-
     steps:
     - name: AWS CodeDeploy
       uses: sourcetoad/aws-codedeploy-action@v1
@@ -21,7 +20,6 @@ jobs:
         codedeploy_group: example-codedeploy-deployment-group
         codedeploy_register_only: true
         s3_bucket: codepipeline-ap-southeast-1-794253563693
-        s3_folder: production
-        excluded_files: '.git/* .env storage/framework/cache/* node_modules/*'
+        s3_folder: /
         max_polling_iterations: 60
         directory: ./
