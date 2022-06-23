@@ -26,3 +26,4 @@ jobs:
       run : |
       aws deploy push --application-name example-codedeploy-app --description "This is app" --s3-location s3://codepipeline-ap-southeast-1-794253563693/laravel.zip --source lrv-githubaction
       aws deploy create-deployment --application-name example-codedeploy-app --s3-location bucket=codepipeline-ap-southeast-1-794253563693,key=laravel.zip,bundleType=zip,eTag=4cfc57c679e58e43058f2ed30844ba3f-9 --deployment-group-name example-codedeploy-deployment-group --deployment-config-name CodeDeployDefault.OneAtATime
+
